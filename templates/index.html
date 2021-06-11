@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html xmlns:float="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GS 폴리머 예측</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.gscaltex.com/images/common/company/ci_symbol.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{url_for('static', filename='css/mdb.min.css')}}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{url_for('static', filename='css/style.min.css')}}" rel="stylesheet">
+  <!-- 나눔 바른 고딕 웹 폰트 적용하기 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <style type="text/css">
+
+
+
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331!important;
+            }
+        }
+
+    .hangul {
+        font-family: 'Nanum Barun Gothic' !important;
+    }
+    </style>
+
+
+</head>
+
+<body >
+
+  <!-- 배너 제작 파트  -->
+  <div style = "font-family: 'Nanum Barun Gothic' !important;position : fixed; bottom : 200px; right : 50px;"><a href = "#predict" class = "btn btn-primary btn-md">&nbsp;예측하기&nbsp;&nbsp;</a></div>
+
+  <div style = "position : fixed; bottom : 155px; right : 50px;"><a href = "#formGroupExampleInputP1" class = "btn btn-grey btn-md">Polymer</a></div>
+  <div style = "position : fixed; bottom : 110px; right : 50px;"><a href = "#formGroupExampleInputF1" class = "btn btn-grey btn-md">&nbsp;&nbsp;&nbsp;&nbsp;Filer&nbsp;&nbsp;&nbsp;</a></div>
+  <div style = "position : fixed; bottom : 65px; right : 50px;"><a href = "#formGroupExampleInputR01" class = "btn btn-grey btn-md"> &nbsp;Rubber&nbsp; </a></div>
+  <div style = "position : fixed; bottom : 20px; right : 50px;"><a href = "#formGroupExampleInputO1" class = "btn btn-grey btn-md"> &nbsp;Others&nbsp;</a></div>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+
+  </nav>
+  <!-- Navbar -->
+
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <!--Indicators-->
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    </ol> -->
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="view">
+
+          <!--Video source-->
+          <video class="video-intro" autoplay loop>
+            <source src="https://www.gspolymer.com/common/video/maincon2.mp4" type="video/mp4" >
+              <!-- <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4" > -->
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong style="font-family: 'Nanum Barun Gothic'">AI 기반 복합수지 물성 예측 플랫폼 서비스</strong>
+              </h1>
+
+              <p>
+                <strong style="font-family: 'Nanum Barun Gothic'">빠르고 정확하게 물성을 예측합니다.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong style="font-family: 'Nanum Barun Gothic'">GS칼텍스 연구소 데이터의 실제 물성 데이터를 분석하여 예측을 수행합니다.</strong>
+              </p>
+
+              <a target="_blank" href="https://www.gscaltex.com/kr/" class="btn btn-outline-white btn-lg" style="font-family: 'Nanum Barun Gothic'">GS 칼텍스 홈페이지
+
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/First slide-->
+    </div>
+
+      <!-- 2,3번 슬라이드 제거 -->
+      <!--Second slide-->
+
+    <!-- 좌우버튼 제거 -->
+    <!-- Controls-->
+    <!-- <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a> -->
+    <!--/.Controls -->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4" >
+
+
+            <img src = "{{ url_for('static', filename='css/DL.png') }}" style="width: 530px; height: 300px;" >
+
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3" style="font-family: 'Nanum Barun Gothic'">복합수지 물성 예측 결과</h3>
+            <p style="font-family: 'Nanum Barun Gothic'">딥러닝과 머신러닝 모델을 앙상블하여 높은 정확도로 복합수지 물성을 예측합니다. &nbsp; 복합수지 물성 예측 프로그램은 폴리머 개발 과정을 효율적으로 발전시킵니다. </p>
+
+            <!-- Main heading -->
+
+
+
+            <p style="font-family: 'Nanum Barun Gothic'">
+            BigData를 학습시켜 정확한 복합수지 물성을 예측하는 모델입니다.
+            </p>
+
+             <hr>
+            <p style="font-family: 'Nanum Barun Gothic'">
+              <h4 style="font-family: 'Nanum Barun Gothic'">엑셀 불러오기</h4>
+            </p>
+           <input type="file"  style="font-family: 'Nanum Barun Gothic'" class="btn btn-grey btn-md" id="files"></input>
+           <hr>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Main info-->
+
+      <hr class="my-5">
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+
+        <h3 class="h3 text-center mb-5" style="font-family: 'Nanum Barun Gothic'; font-weight:bold">복합수지 물성 예측</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <form action="/" method="post">
+              <!-- Default form group -->
+
+
+
+
+          <div>
+            <a href = "#Polymer" name = "top"></a>
+              <h2>
+                <strong style="font-family: 'Nanum Barun Gothic'">Polymer </strong>
+              </h2>
+          </div>
+              <hr>
+
+              <div style='display: flex;'>
+                 <div class="form-group"  >
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP1">P001</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" value=0  type="text" name="avg_temp" class="form-control" id="formGroupExampleInputP1" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <!--  -->
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:185px;" for="formGroupExampleInputCP1" float:pull-right;>COUNT</label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value = 4 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP1" >
+                   </div>
+              </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group" >
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP2">P002</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" value=0 type="text" name="avg_temp2" class="form-control" id="formGroupExampleInputP2" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP2" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 20 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP2" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group"  >
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP3">P003</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp3" class="form-control" id="formGroupExampleInputP3" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP3" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 31 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP3" >
+                  </div>
+                </div>
+
+              <div style='display: flex;'>
+                <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP4">P004</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp4" class="form-control" id="formGroupExampleInputP4" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP4" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP4" >
+                  </div>
+              </div>
+
+                <div style='display: flex;'>
+                <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP5">P005</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp5" class="form-control" id="formGroupExampleInputP5" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP5" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP5" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP6">P006</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp6" class="form-control" id="formGroupExampleInputP6" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP6" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 59 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP6" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP7">P007</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp7" class="form-control" id="formGroupExampleInputP7" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP7" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP7" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP8">P008</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp8" class="form-control" id="formGroupExampleInputP8" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP8" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 44 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP8" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP9">P009</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp9" class="form-control" id="formGroupExampleInputP9" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP9" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP9" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP10">P010</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp10" class="form-control" id="formGroupExampleInputP10" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP10" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP10" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP11">P011</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp11" class="form-control" id="formGroupExampleInputP11" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP11" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 13 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP11" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP12">P012</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp12" class="form-control" id="formGroupExampleInputP12" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP12" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 4 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP12" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP13">P013</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp13" class="form-control" id="formGroupExampleInputP13" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP13" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 3 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP13" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP14">P014</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp14" class="form-control" id="formGroupExampleInputP14" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP14" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 41 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP14" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP15">P015</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp15" class="form-control" id="formGroupExampleInputP15" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP15" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP15" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP16">P016</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp16" class="form-control" id="formGroupExampleInputP16" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP16" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 20 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP16" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP17">P017</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp17" class="form-control" id="formGroupExampleInputP17" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP17" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 31 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP17" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP18">P018</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp18" class="form-control" id="formGroupExampleInputP18" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP18" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 23 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP18" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP19">P019</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp19" class="form-control" id="formGroupExampleInputP19" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP19" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 158 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP19" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP20">P020</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp20" class="form-control" id="formGroupExampleInputP20" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP20" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 3 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP20" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP21">P021</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp21" class="form-control" id="formGroupExampleInputP21" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP21" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP21" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP22">P022</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp22" class="form-control" id="formGroupExampleInputP22" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP22" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 92 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP22" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP23">P023</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp23" class="form-control" id="formGroupExampleInputP23" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP23" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 0 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP23" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP24">P024</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp24" class="form-control" id="formGroupExampleInputP24" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP24" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 24 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP24" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP25">P025</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp25" class="form-control" id="formGroupExampleInputP25" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP25" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP25" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP26">P026</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp26" class="form-control" id="formGroupExampleInputP26" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP26" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 54 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP26" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP27">P027</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp27" class="form-control" id="formGroupExampleInputP27" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP27" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 19 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP27" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP28">P028</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp28" class="form-control" id="formGroupExampleInputP28" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP28" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 49 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP28" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP29">P029</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp29" class="form-control" id="formGroupExampleInputP29" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP29" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 134 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP29" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP30">P030</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp30" class="form-control" id="formGroupExampleInputP30" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP30" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 230 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP30" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP31">P031</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp31" class="form-control" id="formGroupExampleInputP31" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP31" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 3 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP31" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP32">P032</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp32" class="form-control" id="formGroupExampleInputP32" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP32" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 14 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP32" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP33">P033</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp33" class="form-control" id="formGroupExampleInputP33" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP33" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 3 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP33" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP34">P034</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp34" class="form-control" id="formGroupExampleInputP34" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP34" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 168 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP34" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP35">P035</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp35" class="form-control" id="formGroupExampleInputP35" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP35" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 13 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP35" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP36">P036</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp36" class="form-control" id="formGroupExampleInputP36" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP36" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP36" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP37">P037</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp37" class="form-control" id="formGroupExampleInputP37" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP37" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP37" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP38">P038</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp38" class="form-control" id="formGroupExampleInputP38" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP38" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 4 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP38" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP39">P039</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp39" class="form-control" id="formGroupExampleInputP39" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP39" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 27 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP39" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP40">P040</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp40" class="form-control" id="formGroupExampleInputP40" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP40" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP40" >
+                  </div>
+                </div>
+
+                  <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputP41">P041</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="avg_temp41" class="form-control" id="formGroupExampleInputP41" placeholder="Polymer 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCP41" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCP41" >
+                  </div>
+                </div>
+
+              <hr>
+              <h2>
+                <strong style="font-family: 'Nanum Barun Gothic'">Filer </strong>
+              </h2>
+              <hr>
+                  <!-- Default input -->
+                  <!--  -->
+                <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF1">F001</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp" class="form-control" id="formGroupExampleInputF1" placeholder="Filler 입력하세요.">
+                  </div>
+                  <!-- -->
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF01" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 6 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF01" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF2">F002</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp2" class="form-control" id="formGroupExampleInputF2" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF02" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF02" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF3">F003</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp3" class="form-control" id="formGroupExampleInputF3" placeholder="Filler 입력하세요.">
+                  </div>
+
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF03" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 11 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF03" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF4">F004</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp4" class="form-control" id="formGroupExampleInputF4" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF04" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 81 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF04" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF5">F005</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp5" class="form-control" id="formGroupExampleInputF5" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF05" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 37 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF05" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF6">F006</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp6" class="form-control" id="formGroupExampleInputF6" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF06" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 59 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF06" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF7">F007</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp7" class="form-control" id="formGroupExampleInputF7" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF07" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 59 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF07" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF8">F008</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp8" class="form-control" id="formGroupExampleInputF8" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF08" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 40 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF08" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF9">F009</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp9" class="form-control" id="formGroupExampleInputF9" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF09" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 106 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF09" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF10">F010</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp10" class="form-control" id="formGroupExampleInputF10" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF10" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 23 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF10" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF11">F011</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp11" class="form-control" id="formGroupExampleInputF11" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF11" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 179 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF11" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF12">F012</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp12" class="form-control" id="formGroupExampleInputF12" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF12" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 47 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF12" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF13">F013</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp13" class="form-control" id="formGroupExampleInputF13" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF13" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 24 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF13" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF14">F014</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp14" class="form-control" id="formGroupExampleInputF14" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF14" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF14" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF15">F015</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp15" class="form-control" id="formGroupExampleInputF15" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF15" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF15" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF16">F016</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp16" class="form-control" id="formGroupExampleInputF16" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF16" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 126 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF16" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF17">F017</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp17" class="form-control" id="formGroupExampleInputF17" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF17" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 81 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF17" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputF18">F018</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="min_temp18" class="form-control" id="formGroupExampleInputF18" placeholder="Filler 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCF18" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 20 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCF18" >
+                  </div>
+                </div>
+
+                <hr>
+                <h2>
+                  <strong style="font-family: 'Nanum Barun Gothic'">Rubber </strong>
+                </h2>
+                <hr>
+                  <!-- Default input -->
+                  <!--  -->
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR01">R001</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp" class="form-control" id="formGroupExampleInputR01" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR01" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR01" >
+                  </div>
+                </div>
+                  <!--  -->
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR02">R002</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp2" class="form-control" id="formGroupExampleInputR02" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR02" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 7 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR02" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR03">R003</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp3" class="form-control" id="formGroupExampleInputR03" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR03" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 10 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR03" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR04">R004</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp4" class="form-control" id="formGroupExampleInputR04" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR04" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR04" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR05">R005</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp5" class="form-control" id="formGroupExampleInputR05" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR05" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 7 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR05" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR06">R006</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp6" class="form-control" id="formGroupExampleInputR06" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR06" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR06" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR07">R007</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp7" class="form-control" id="formGroupExampleInputR07" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR07" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 8 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR07" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR08">R008</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp8" class="form-control" id="formGroupExampleInputR08" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR08" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly  type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR08" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR09">R009</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp9" class="form-control" id="formGroupExampleInputR09" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR09" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 2 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR09" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR10">R010</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp10" class="form-control" id="formGroupExampleInputR10" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR10" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 121 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR10" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR11">R011</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp11" class="form-control" id="formGroupExampleInputR11" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR11" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 30 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR11" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR12">R012</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp12" class="form-control" id="formGroupExampleInputR12" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR12" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 6 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR12" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR13">R013</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp13" class="form-control" id="formGroupExampleInputR13" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR13" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 197 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR13" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR14">R014</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp14" class="form-control" id="formGroupExampleInputR14" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR14" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 29 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR14" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR15">R015</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp15" class="form-control" id="formGroupExampleInputR15" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR15" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 14 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR15" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR16">R016</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp16" class="form-control" id="formGroupExampleInputR16" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR16" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 47 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR16" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR17">R017</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp17" class="form-control" id="formGroupExampleInputR17" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR17" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 306 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR17" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR18">R018</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp18" class="form-control" id="formGroupExampleInputR18" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR18" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 44 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR18" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR19">R019</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp19" class="form-control" id="formGroupExampleInputR19" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR19" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 19 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR19" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR20">R020</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp20" class="form-control" id="formGroupExampleInputR20" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR20" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 9 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR20" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR21">R021</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp21" class="form-control" id="formGroupExampleInputR21" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR21" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 35 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR21" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputR22">R022</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="max_temp22" class="form-control" id="formGroupExampleInputR22" placeholder="Rubber 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCR22" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 8 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCR22" >
+                  </div>
+                </div>
+
+                <hr>
+                <h2>
+                  <strong style="font-family: 'Nanum Barun Gothic'">Others </strong>
+                </h2>
+                <hr>
+                  <!-- Default input -->
+                  <!--  -->
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO1">OTH1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall" class="form-control" id="formGroupExampleInputO1" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO1" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 560 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO1" >
+                  </div>
+                </div>
+
+                  <!--  -->
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO2">OTH2</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall2" class="form-control" id="formGroupExampleInputO2" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO2" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 116 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO2" >
+                  </div>
+                </div>
+
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO3">OTH3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall3" class="form-control" id="formGroupExampleInputO3" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO3" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 116 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO3" >
+                  </div>
+                </div>
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO4">OTH4</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall4" class="form-control" id="formGroupExampleInputO4" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO4" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 1 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO4" >
+                  </div>
+                </div>
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO5">OTH5</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall5" class="form-control" id="formGroupExampleInputO5" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO5" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 95 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO5" >
+                  </div>
+                </div>
+
+                <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO6">OTH6</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall6" class="form-control" id="formGroupExampleInputO6" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO6" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 75 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO6" >
+                  </div>
+                </div>
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO7">OTH7</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall7" class="form-control" id="formGroupExampleInputO7" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO7" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 160 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO7" >
+                  </div>
+                </div>
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                     <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO8">OTH8</label>
+                     <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall8" class="form-control" id="formGroupExampleInputO8" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO8" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 92 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO8" >
+                  </div>
+                </div>
+
+
+                  <div style='display: flex;'>
+                  <div class="form-group">
+                   <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInputO9">OTH9</label>
+                   <input style="font-family: 'Nanum Barun Gothic'" type="text" value=0 name="rain_fall9" class="form-control" id="formGroupExampleInputO9" placeholder="Others 입력하세요.">
+                  </div>
+                  <div class="form-group" style="width:20%; float:right; flex:1; margin-left:50px" >
+                    <label style="font-family: 'Nanum Barun Gothic'; width:100px;margin-left:165px;" for="formGroupExampleInputCO9" float:pull-right;><br></label>
+                    <input style="font-family: 'Nanum Barun Gothic';width:100px;float:right; text-align:center;" value= 4 readonly type="text" name="avg_temp_count" class="form-control" id="formGroupExampleInputCO9" >
+                  </div>
+                </div>
+
+
+              <!-- Default form group -->
+              <button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" id="predict" class="btn btn-primary btn-md pull-right">예측하기</button>
+
+            </form>
+
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <h2 class="h5 text-center mb-4" style="font-family: 'Nanum Barun Gothic'"><strong>예측 결과</strong></h2>
+
+            <br>
+
+            {% if price %}
+                <h5 class="text-center mt-3" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price }}</h5>
+                <h5 class="text-center mt-3">{{ price_1 }}</h5>
+                <hr width=50% style ="color:#ff8c00;">
+                <h5 class="text-center mt-2"  style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price2 }}</h5>
+                <h5 class="text-center mt-2">{{ price2_1 }}</h5>
+
+            <hr width=50% style ="color:#ff8c00;">
+
+                <h5 class="text-center mt-2" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price3 }}</h5>
+                <h5 class="text-center mt-2">{{ price3_1 }}</h5>
+              <hr width=50% style ="color:#ff8c00;">
+                <h5 class="text-center mt-2" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price4 }}</h5>
+                <h5 class="text-center mt-2">{{ price4_1 }}</h5>
+              <hr width=50% style ="color:#ff8c00;">
+                <h5 class="text-center mt-2" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price5 }}</h5>
+                <h5 class="text-center mt-2">{{ price5_1 }}</h5>
+              <hr width=50% style ="color:#ff8c00;">
+                <h5 class="text-center mt-2" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price6 }}</h5>
+                <h5 class="text-center mt-2">{{ price6_1 }}</h5>
+              <hr width=50% style ="color:#ff8c00;">
+                <h5 class="text-center mt-2" style="font-family: 'Nanum Barun Gothic'; font-weight:bold; color:#019999;">{{ price7 }}</h5>
+                <h5 class="text-center mt-2">{{ price7_1 }}</h5>
+            {% endif %}
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3" style >
+     <p style = color:#019999;> © 2020 GS칼텍스: 비빔밥 </p>
+     <a href=""><img src="https://www.gspolymer.com/common/images/footer_logo.png" alt="gs폴리머"></a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>
